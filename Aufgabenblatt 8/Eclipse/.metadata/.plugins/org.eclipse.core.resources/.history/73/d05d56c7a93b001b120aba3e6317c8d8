@@ -1,0 +1,9 @@
+
+public class Main {
+	public static void main(String[] args) {
+		Menge m = new Menge();
+		String menge;
+		m.setMenge(menge);
+		System.out.println(m.getMenge());
+	}
+}

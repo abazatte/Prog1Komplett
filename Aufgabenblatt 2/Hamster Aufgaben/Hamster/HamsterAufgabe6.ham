@@ -1,0 +1,52 @@
+/*imperative program*/void main() {
+	while (vornFrei()) {
+		prozedur();
+		vor();
+	}
+	prozedur();
+	zurückZumAnfang();
+	while (vornFrei()) {
+		prozedur();
+		vor();
+	}
+	prozedur();
+	zurückZumAnfang();
+}
+void prozedur() {
+	int i = 0;	
+	int j = 0;	
+   		while (kornDa()) {
+ 	  		nimm();
+  		 	i++;
+		}
+		rechtsUm();
+		vor();
+		linksUm();
+		while (kornDa()) {
+			nimm();
+			j++;
+		}
+		for (int k = i; i>0; i--) {
+    		gib();
+    	}
+    	linksUm();
+    	vor();
+    	rechtsUm();
+    	for (int k = j; j>0; j--) {
+    	gib();
+    	}
+}
+void rechtsUm() {
+	linksUm();
+	linksUm();
+	linksUm();
+}
+void zurückZumAnfang() {
+	linksUm();
+	linksUm();
+	while (vornFrei()) {
+	vor();
+	}
+	linksUm();
+	linksUm();
+}

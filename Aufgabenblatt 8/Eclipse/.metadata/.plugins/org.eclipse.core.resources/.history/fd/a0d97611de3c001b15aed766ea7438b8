@@ -1,0 +1,18 @@
+
+public class Main {
+	public static void main(String[] args) {
+//		Personen p = new Personen(IO.readString(), IO.readString());
+//		System.out.println(p.getNachname() + p.getVorname());
+//
+//		Menge m0 = new Menge();
+//		Menge m1 = new Menge(m0);
+//
+//		System.out.println(m0.equals(m1));
+		System.out.println(
+				"(a) Erzeugen einer neuen leeren Menge\n(b) Erzeugen einer neuen leeren Menge mit einer bereits existierenden\n(c) Überprüfen auf Gleichheit zweier Mengen\n(d) Hinzufügen einer Person aus einer Menge\n(e) Entfernen einer Person aus einer Menge\n(f) Überprüfen anhand Vor-Nachnamens, ob eine bestimmte Person in der Menge enthalten ist\n(g) Schnittmengenbildung zweier Mengen\n(h) Vereinigung zweier Mengen\n(i) Differenzbildung zweier Mengen");
+		char eingabe = IO.readChar("Welche Funktion soll aufgerufen werden? ");
+		while (eingabe != 'a' && eingabe != 'b' && eingabe != 'c' && eingabe != 'd' && eingabe != 'e' && eingabe != 'f' && eingabe != 'g' && eingabe != 'h' && eingabe != 'i' && eingabe != '0') {
+			eingabe = IO.readChar("Falsche Eingabe!\nWelche Funktion soll aufgerufen werden? ");
+		}
+	}
+}

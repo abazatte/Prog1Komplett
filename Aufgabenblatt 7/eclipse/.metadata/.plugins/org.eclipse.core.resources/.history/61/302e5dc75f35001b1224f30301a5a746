@@ -1,0 +1,7 @@
+
+public class Main {
+	public static void main(String[] args) {
+		Produkt p1 = new Produkt();
+		System.out.println(p1);
+	}
+}

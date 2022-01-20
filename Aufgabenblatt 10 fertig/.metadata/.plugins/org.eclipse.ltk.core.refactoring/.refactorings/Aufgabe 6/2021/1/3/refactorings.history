@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;UE18Aufgabe&apos; to &apos;UE18Aufgabe1&apos;&#x0D;&#x0A;- Original project: &apos;Aufgabe 6&apos;&#x0D;&#x0A;- Original element: &apos;UE18Aufgabe&apos;&#x0D;&#x0A;- Renamed element: &apos;UE18Aufgabe1&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;UE18Aufgabe&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{UE18Aufgabe.java[UE18Aufgabe" matchStrategy="1" name="UE18Aufgabe1" qualified="false" references="true" similarDeclarations="false" stamp="1610973430419" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,43 @@
+
+public class Antworten {
+	private int[] jaAntworten;
+	private int[] neinAntworten;
+	private double prozent;
+
+	public Antworten(int i) {
+		setJaListe(i);
+		setNeinListe(i);
+	}
+
+	public void setJaListe(int i) {
+		this.jaAntworten = new int[i];
+	}
+
+	public void setNeinListe(int i) {
+		this.neinAntworten = new int[i];
+	}
+
+	public int[] getJaAntworten() {
+		return jaAntworten;
+	}
+
+	public void setJaAntworten(int[] jaAntworten) {
+		this.jaAntworten = jaAntworten;
+	}
+
+	public int[] getNeinAntworten() {
+		return neinAntworten;
+	}
+
+	public void setNeinAntworten(int[] neinAntworten) {
+		this.neinAntworten = neinAntworten;
+	}
+
+	public double getProzent() {
+		return prozent;
+	}
+
+	public void setProzent(double prozent) {
+		this.prozent = prozent;
+	}
+}

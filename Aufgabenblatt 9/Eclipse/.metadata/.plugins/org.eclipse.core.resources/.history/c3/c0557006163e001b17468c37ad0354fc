@@ -1,0 +1,36 @@
+
+public class Spielfeld {
+	private char[][] spielfeld;
+
+	public char[][] getSpielfeld() {
+		return spielfeld;
+	}
+
+	public void setSpielfeld(char[][] spielfeld) {
+		this.spielfeld = spielfeld;
+	}
+	public void ausgabe(int groesse) {
+		System.out.print("\t");
+		for (int n = 0; n < groesse; n++) {
+			System.out.print("  " + n + " ");
+		}
+		System.out.print("\n\t");
+		for (int n = 0; n < groesse; n++) {
+			System.out.print("+---");
+		}
+		System.out.println("+");
+		for (int a = 0; a < this.spielfeld.length; a++) {
+			System.out.print(a + "\t|");
+			for (int b = 0; b < this.spielfeld[a].length; b++) {
+				System.out.print(" " + this.spielfeld[a][b] + " |");
+			}
+
+			System.out.println("\t");
+			System.out.print("\t");
+			for (int n = 0; n < groesse; n++) {
+				System.out.print("+---");
+			}
+			System.out.println("+");
+		}
+	}
+}

@@ -1,0 +1,30 @@
+
+public class Fragen {
+	private String[] frageListe;
+	private String frage;
+	
+	public Fragen(int i) {
+		setFrageListe(i);
+		setFrage(i, getFrageListe());
+	}
+
+	public String[] getFrageListe() {
+		return frageListe;
+	}
+
+	public void setFrageListe(int i) {
+		this.frageListe = new String[i];
+	}
+
+	public String getFrage() {
+		return frage;
+	}
+
+	public void setFrage(int i, String[] frageliste) {
+		for(int n = 1; n<=i;i++) {
+			this.frage
+		}
+	}
+	
+	
+}

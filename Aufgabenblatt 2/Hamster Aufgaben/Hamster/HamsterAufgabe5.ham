@@ -1,0 +1,51 @@
+/*imperative program*/void main() {
+	bisSchluss();
+	prozedur();
+} void bisSchluss() {
+	while (vornFrei()) {
+		prozedur();
+		vor();
+	}
+}	
+void prozedur() {	
+		linksUm();
+		vor();
+		vor();
+		while (kornDa()) {
+			nimm();
+		}
+		linksUm();
+		linksUm();
+		vor();
+		vor();
+		while (!maulLeer()) {
+			gib();
+		}
+		linksUm();
+		linksUm();
+		vor();
+		while (kornDa()) {
+			nimm();	
+		}
+		vor();
+		while (!maulLeer()) {
+			gib();
+		}
+		linksUm();
+		linksUm();
+		vor();
+		vor();
+		while (kornDa()) {
+			nimm();
+		}
+		linksUm();
+		linksUm();
+		vor();
+		while (!maulLeer()) {
+			gib();
+		}
+		linksUm();
+		linksUm();
+		vor();
+		linksUm();
+}

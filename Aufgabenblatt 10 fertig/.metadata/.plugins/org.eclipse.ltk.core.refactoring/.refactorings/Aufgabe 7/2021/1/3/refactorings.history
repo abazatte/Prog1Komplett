@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;Konto.kontoStandAusgeben(...)&apos; to &apos;kontoStand&apos;&#x0D;&#x0A;- Original project: &apos;Aufgabe 7&apos;&#x0D;&#x0A;- Original element: &apos;Konto.kontoStandAusgeben(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;Konto.kontoStand(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;kontoStandAusgeben&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;{Konto.java[Konto~kontoStandAusgeben~QKonto;" name="kontoStand" references="true" stamp="1610962117939" version="1.0"/>
+</session>

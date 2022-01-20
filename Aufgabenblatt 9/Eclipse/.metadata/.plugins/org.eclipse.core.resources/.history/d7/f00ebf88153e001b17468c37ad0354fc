@@ -1,0 +1,7 @@
+
+public class Spielzug {
+	public static void main(String[] args) {
+		Spielfeld sp = new Spielfeld();
+		sp.ausgabe();
+	}
+}

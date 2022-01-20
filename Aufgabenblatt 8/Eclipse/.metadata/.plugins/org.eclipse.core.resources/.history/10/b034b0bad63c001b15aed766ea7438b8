@@ -1,0 +1,12 @@
+
+public class Main {
+	public static void main(String[] args) {
+		Menge m0 = new Menge();
+		String menge = null;
+		m0.setMenge(menge);
+		System.out.println(m0.getMenge());
+		Menge m1 = m0;
+		System.out.println(m1);
+		System.out.println(m1.equals(m0));
+	}
+}

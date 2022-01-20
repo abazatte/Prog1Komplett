@@ -1,0 +1,14 @@
+
+public class Test {
+	private static Integer[] z = new Integer[5];
+	public static void init() {
+	 Integer i = 1;
+	 System.out.print("init: ");
+	 for (int j = 0; j < z.length; j++) {
+	 z[j] = i;
+	 i = i + j % 5;
+	 System.out.print(z[j] +"\t");
+	 }
+	 System.out.println();
+	 } 
+}

@@ -1,0 +1,10 @@
+
+public class Main {
+	public static void main(String[] args) {
+		Produkt p1 = new Produkt();
+		p1.ausgabe(p1);
+		Produkt p2 = new Produkt("Handyhülle", 1542, 10.99);
+		p2.ausgabe(p2);
+		
+	}
+}

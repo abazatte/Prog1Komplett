@@ -1,0 +1,63 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		// Vorbereitung
+		System.out.println("Fragen eingeben");
+		System.out.println("------------");
+
+		// Frageliste(Name, Anzahl Fragen, Fragen)
+		String umfrageName = IO.readString("Titel der Umfrage: ");
+		int anzahlFragen = IO.readInt("Anzahl der Fragen: ");
+		Frageliste frageliste = new Frageliste(anzahlFragen);
+		frageliste.setUmfrageName(umfrageName);
+		for (int i = 1; i <= anzahlFragen; i++) {
+			String frage = IO.readString("Frage " + i + ":");
+			frageliste.setFrage(frage, i);
+		}
+
+		UmfrageAntw umfrageAntw = new UmfrageAntw(anzahlFragen);
+
+		// Umfrage
+		System.out.println();
+		System.out.println("Umfrage");
+		System.out.println("------------");
+		int anzahlTeilnehmer = 0;
+
+		char auswahl;
+		while ((auswahl = IO.readChar("Weiterer Teilnehmer (j/n)?")) == 'j') {
+			for (int i = 1; i <= anzahlFragen; i++) {
+				char antwort;
+				do {
+					System.out.println(frageliste.getFrage(i));
+					antwort = IO.readChar("ja/nein (j/n)?");
+				} while (antwort != 'j' && antwort != 'n');
+
+				if (antwort == 'j') {
+					umfrageAntw.erhoehtAnzahlJa(i);
+				} else {
+					umfrageAntw.erhoehtAnzahlNein(i);
+				}
+
+			}
+			anzahlTeilnehmer++;
+		}
+
+		// Auswertung
+		System.out.println();
+		System.out.println("Umfrageergebnisse");
+		System.out.println("-----------------");
+		System.out.println("Umfrage: " + frageliste.getUmfrageName());
+		double ergbnisProzentJa = 0.0;
+		double ergbnisProzentNein = 0.0;
+		for (int i = 1; i <= anzahlFragen; i++) {
+			System.out.println("Frage: " + frageliste.getFrage(i));
+			ergbnisProzentJa = ((double) umfrageAntw.getAnzahlJa(i) / anzahlTeilnehmer) * 100;
+			ergbnisProzentNein = ((double) umfrageAntw.getAnzahlNein(i) / anzahlTeilnehmer) * 100;
+			System.out.println("ja-Antworten: " + umfrageAntw.getAnzahlJa(i) + " = " + ergbnisProzentJa + " Prozent");
+			System.out.println(
+					"nein-Antworten: " + umfrageAntw.getAnzahlNein(i) + " = " + ergbnisProzentNein + " Prozent");
+		}
+	}
+}

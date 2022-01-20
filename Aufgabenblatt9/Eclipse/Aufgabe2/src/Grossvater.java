@@ -1,0 +1,51 @@
+
+class Grossvater {
+	int x = 3;
+	int y = -4;
+}
+
+class Vater extends Grossvater {
+	float x = 4.5F;
+	int z;
+
+	public Vater(int z) {
+		this.z = z;
+	}
+}
+
+class Sohn extends Vater {
+	long a;
+	double x = -18.5;
+
+	public Sohn(long a) {
+		super(5);
+		this.a = a;
+	}
+}
+
+class Enkel extends Sohn {
+	double ergebnis;
+	double ergebnisX;
+	double ergebnisY;
+	double ergebnisZ;
+	double ergebnisA;
+
+	public Enkel(long a) {
+		super(a);
+
+	}
+
+	public void ergebnisse() {
+		ergebnisX = ((Grossvater) this).x + ((Vater) this).x + ((Sohn) this).x;
+		System.out.println("Summe aller x: " + ergebnisX);
+		ergebnisY = ((Grossvater) this).y;
+		System.out.println("Summe aller y: " + ergebnisY);
+		ergebnisZ = ((Vater) this).z;
+		System.out.println("Summe aller z: " + ergebnisZ);
+		ergebnisA = ((Sohn) this).a;
+		System.out.println("Summe aller a: " + ergebnisA);
+		ergebnis = ergebnisX + ergebnisY + ergebnisZ + ergebnisA;
+		System.out.println("Summe aller Werte: " + ergebnis);
+
+	}
+}

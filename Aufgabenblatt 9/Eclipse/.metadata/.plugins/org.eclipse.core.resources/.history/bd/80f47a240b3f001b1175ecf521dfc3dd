@@ -1,0 +1,4 @@
+
+public class Autos {
+	private char auto;
+}

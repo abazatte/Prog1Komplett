@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\aazat\Desktop\Neu\Hochschule\Programmierung\Aufgabenblatt 5\WuerfelWetteMitGUI_StudiVersion\WuerfelWetteMitGUI\.metadata\.plugins\org.eclipse.jdt.core
+1289320443.index

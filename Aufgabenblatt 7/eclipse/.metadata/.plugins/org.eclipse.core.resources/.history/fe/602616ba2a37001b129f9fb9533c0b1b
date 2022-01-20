@@ -1,0 +1,18 @@
+
+public class Haendler {
+	double buchPreis;
+	double dvdPreis;
+	double einnamen;
+
+	public Haendler(double buchpreis) {
+		this.buchPreis = buchpreis;
+	}
+
+	public void kaufen(int anzahl) {
+		this.einnamen += this.buchPreis * anzahl;
+	}
+
+	public double liefereEinnahmen() {
+		return einnamen;
+	}
+}

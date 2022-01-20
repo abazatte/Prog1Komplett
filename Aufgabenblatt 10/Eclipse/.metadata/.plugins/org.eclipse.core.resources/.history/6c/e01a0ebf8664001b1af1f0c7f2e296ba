@@ -1,0 +1,46 @@
+
+public class Aufgabe_Probe {
+
+	public static void main(String[] args) {
+		char[] klartext = new char[10];
+		klartext[0] = 'G';
+		klartext[1] = 'a';
+		klartext[2] = 'r';
+		klartext[3] = 't';
+		klartext[4] = 'e';
+		klartext[5] = 'n';
+		klartext[6] = 'z';
+		klartext[7] = 'a';
+		klartext[8] = 'u';
+		klartext[9] = 'n';
+		System.out.println(klartext);
+		System.out.println(verschluesseln(klartext));
+		System.out.println(verschluesseln(verschluesseln(klartext)));
+		System.out.println(verschluesseln(verschluesseln(verschluesseln((klartext)))));
+		System.out.println(verschluesseln(verschluesseln(verschluesseln(verschluesseln((klartext))))));
+		
+	}
+
+	static char[] verschluesseln(char[] klar) {
+		char[] verschl1 = new char[klar.length / 2];
+		char[] verschl2 = new char[klar.length / 2];
+		for (int i = 0; i < klar.length; i++) {
+			if (i % 2 == 0) {
+				verschl1[i / 2] = klar[i];
+			} else {
+				verschl2[i / 2] = klar[i];
+			}
+		}
+
+		char[] verschl = new char[klar.length];
+		for (int i = 0; i < verschl1.length; i++) {
+			verschl[i] = verschl1[i];
+		}
+		int x = 0;
+		for (int i = 5; i < klar.length; i++) {
+			verschl[i] = verschl2[x];
+			x++;
+		}
+		return verschl;
+	}
+}

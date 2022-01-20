@@ -1,0 +1,6 @@
+
+public class Personen {
+	public String nachname;
+	public String vorname;
+	
+}

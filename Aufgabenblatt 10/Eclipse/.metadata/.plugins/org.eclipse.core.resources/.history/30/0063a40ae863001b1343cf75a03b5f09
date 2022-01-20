@@ -1,0 +1,21 @@
+
+public class Test {
+	static int getZiffernWert(int zahl, int stelle) {
+		if (stelle > 0) {
+			int x = 0;
+			while (x < stelle) {
+				zahl = zahl/10;
+				x++;
+			}
+			zahl = zahl%10;
+			return zahl;
+		} else {
+			zahl = zahl%10;
+			return zahl;
+		}
+	}
+
+	public static void main(String[] args) {
+		System.out.println(getZiffernWert(27381,3));
+	}
+}

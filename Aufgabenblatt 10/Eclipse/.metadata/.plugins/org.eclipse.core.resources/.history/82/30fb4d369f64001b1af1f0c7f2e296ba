@@ -1,0 +1,13 @@
+
+public class Test {
+	static int x;
+	final static int HALLO = 1;
+	int y;
+}
+
+class Test1 extends Test {
+	void da() {
+		this.x = 0;
+		this.y= 1;
+	}
+}

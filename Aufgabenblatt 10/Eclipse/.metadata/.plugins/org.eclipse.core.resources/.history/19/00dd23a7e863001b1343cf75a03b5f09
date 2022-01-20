@@ -1,0 +1,13 @@
+
+public class Test {
+	static int x;
+	final static int HALLO = 1;
+}
+
+class Test1 extends Test {
+	public static void main(String[] args) {
+		Test1 test = new Test1();
+		x = 0;
+		 System.out.println(test.HALLO);
+	}
+}

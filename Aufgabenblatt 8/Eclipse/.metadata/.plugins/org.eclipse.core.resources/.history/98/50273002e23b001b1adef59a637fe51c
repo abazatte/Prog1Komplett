@@ -1,0 +1,5 @@
+
+public class Fragen {
+	private String[] frageListe;
+	private String frage;
+}

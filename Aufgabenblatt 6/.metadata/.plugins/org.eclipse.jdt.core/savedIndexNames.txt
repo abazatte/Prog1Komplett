@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\aazat\Desktop\Neu\Hochschule\Programmierung\Aufgabenblatt 6\.metadata\.plugins\org.eclipse.jdt.core
+1563086041.index
+1289320443.index
+3290668387.index

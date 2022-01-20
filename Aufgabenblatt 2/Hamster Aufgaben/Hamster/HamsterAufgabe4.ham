@@ -1,0 +1,93 @@
+/*imperative program*/void main() {
+	ersteReihe();
+	vor();
+	rechtsUm();
+	zweiteReihe();
+	vor();
+	linksUm();
+	dritteReihe();
+	vor();
+	rechtsUm();
+	vierteReihe();
+}
+void ersteReihe() {
+	essenCheck();
+	vornFreiCheckRechts();
+	essenCheck();
+	vornFreiCheckRechts();
+	essenCheck();
+	vornFreiCheckRechts();
+	essenCheck();
+	vornFreiCheckRechts();
+}
+void zweiteReihe() {
+	essenCheck();
+	vornFreiCheckLinks();
+	essenCheck();
+	vornFreiCheckLinks();	
+	essenCheck();
+	vornFreiCheckLinks();	
+	essenCheck();
+	vornFreiCheckLinks();
+}
+void dritteReihe() {
+	essenCheck();
+	vornFreiCheckRechts();
+	essenCheck();
+	vornFreiCheckRechts();
+	essenCheck();
+	vornFreiCheckRechts();
+	essenCheck();
+	vornFreiCheckRechts();
+}
+void vierteReihe() {
+	essenCheck();
+	vornFreiCheckRechts();
+	essenCheck();
+	vornFreiCheckRechts();
+	essenCheck();
+	vornFreiCheckRechts();
+	essenCheck();
+}
+void essenCheck() {
+	if (kornDa()) {
+		nimm();
+		if (kornDa()) {
+			nimm();
+			if (kornDa()) {
+				nimm();
+				if (kornDa()) {
+					nimm();
+				} else {
+					gib();
+					gib();
+					gib();
+				}
+			} else {
+				gib();
+				gib();
+			}
+		} else {
+			gib();
+		}
+	}
+}
+void vornFreiCheckRechts() {
+	if (vornFrei()) {
+		vor();
+	} else {
+		rechtsUm();
+	}
+}
+void vornFreiCheckLinks() {
+	if (vornFrei()) {
+		vor();
+	} else {
+		linksUm();
+	}
+}
+void rechtsUm() {
+	linksUm();
+	linksUm();
+	linksUm();
+}

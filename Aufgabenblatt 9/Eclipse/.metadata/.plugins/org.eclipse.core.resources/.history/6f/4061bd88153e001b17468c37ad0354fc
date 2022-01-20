@@ -1,0 +1,22 @@
+
+public class Spielfeld {
+	private char[][] spielfeld;
+
+	public char[][] getSpielfeld() {
+		return spielfeld;
+	}
+
+	public void setSpielfeld(char[][] spielfeld) {
+		this.spielfeld = spielfeld;
+	}
+	public void ausgabe() {
+		System.out.println("+--+--+--+--+");
+		for (int i = 0; i < 4; i++) {
+			System.out.print("|");
+			for (int j = 0; j < 4; j++) {
+				System.out.print(this.spielfeld[i][j] + "|");
+			}
+			System.out.println("\n+--+--+--+--+");
+		}
+	}
+}

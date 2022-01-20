@@ -1,0 +1,28 @@
+
+public class ZugTest {
+	public static void main(String[] args) {
+	
+	Lokomotive bigChief = new Lokomotive(23, 5311,"Big Chief");
+	Zug santaFee = new Zug(bigChief,"Santafee");
+	Wagen erster_sF = new Wagen(12, 50);
+	Wagen zweiter_sF = new Wagen(15, 75);
+	Wagen dritter_sF = new Wagen(20, 100);
+	santaFee.addWagen(erster_sF);
+	santaFee.addWagen(zweiter_sF);
+	santaFee.addWagen(dritter_sF);
+	santaFee.printZug();
+	
+	Lokomotive steelHorse = new Lokomotive(23, 5311,"Steel Horse");
+	Zug rioGrandeExpress = new Zug(steelHorse, "RioGrandeExpress");
+	Wagen erster_rGE = new Wagen(13, 60);
+	Wagen zweiter_rGE = new Wagen(18, 80);
+	rioGrandeExpress.addWagen(erster_rGE);
+	rioGrandeExpress.addWagen(zweiter_rGE);
+	rioGrandeExpress.printZug();
+	
+	Zug.relink(rioGrandeExpress, santaFee);
+	rioGrandeExpress.printZug();
+	System.out.println(rioGrandeExpress.getZugKapazitaet());
+	System.out.println(rioGrandeExpress.getZugLaenge(rioGrandeExpress));
+	}
+}

@@ -1,0 +1,33 @@
+
+public class Frageliste {
+
+	String umfrageName;
+	int anzahlFragen;
+	String[] fragen;
+
+	Frageliste(int anzahlFragen) {
+		this.anzahlFragen = anzahlFragen;
+		this.fragen = new String[anzahlFragen];
+	}
+
+	public String getUmfrageName() {
+		return umfrageName;
+	}
+
+	public void setUmfrageName(String umfrageName) {
+		this.umfrageName = umfrageName;
+	}
+
+	public int getAnzahlFrage() {
+		return anzahlFragen;
+	}
+
+	public String getFrage(int frageNr) {
+		return fragen[frageNr - 1];
+	}
+
+	public void setFrage(String frage, int frageNr) {
+		this.fragen[frageNr - 1] = frage;
+	}
+
+}

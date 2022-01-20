@@ -1,0 +1,34 @@
+
+public class Antworten {
+	int anzahlJa[];
+	int anzahlNein[];
+	// int anzahlTeilnehmer;
+
+	void UmfrageAntw(int anzahlFragen) {
+		this.anzahlJa = new int[anzahlFragen];
+		this.anzahlNein = new int[anzahlFragen];
+		// this.anzahlTeilnehmer = 0;
+
+		for (int i = 0; i < anzahlFragen; i++) {
+			anzahlJa[i] = 0;
+			anzahlNein[i] = 0;
+		}
+	}
+
+	public void erhoehtAnzahlJa(int frageNr) {
+		anzahlJa[frageNr - 1]++;
+	}
+
+	public void erhoehtAnzahlNein(int frageNr) {
+		anzahlNein[frageNr - 1]++;
+	}
+
+	public int getAnzahlJa(int frageNr) {
+		return anzahlJa[frageNr - 1];
+	}
+
+	public int getAnzahlNein(int frageNr) {
+		return anzahlNein[frageNr - 1];
+	}
+
+}

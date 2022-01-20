@@ -1,0 +1,7 @@
+
+public class Main {
+	public static void main(String[] args) {
+		Personen p = new Personen(IO.readString(),IO.readString());
+		System.out.println(p.getNachname() + p.getVorname());
+	}
+}

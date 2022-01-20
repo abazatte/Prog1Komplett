@@ -1,0 +1,47 @@
+
+public class Testprogramm {
+
+	static int maxPers = 50;
+	static Person person1 = new Person("vorName1", "nachName1");
+	static Person person2 = new Person("vorName2", "nachName2");
+	static Person person3 = new Person("vorName3", "nachName3");
+
+	public static void main(String[] args) {
+		Menge m1 = new Menge(maxPers);
+		System.out.println("m1: Anzahl Personen == 0? " + m1.getAnzahlPersonen());
+
+		m1.personHinzu(person1);
+		m1.personHinzu(person2);
+		System.out.println("m1: Anzahl Personen == 2? " + m1.getAnzahlPersonen());
+
+		Menge m2 = new Menge(m1);
+		System.out.println(m2.personen[0].vorName + " " + m2.personen[0].nachName);
+		System.out.println(m2.personen[1].vorName + " " + m2.personen[1].nachName);
+		System.out.println("m2: Anzahl Personen == 2? " + m2.getAnzahlPersonen());
+
+		boolean m1gleichm2 = m1.mengeGleich(m2);
+		System.out.println("m1 = m2 ? " + m1gleichm2);
+
+		m2.personHinzu(person3);
+		m2.personEntf(person2);
+		System.out.println("m2: Anzahl Personen == 2? " + m2.getAnzahlPersonen());
+		System.out.println(m2.personen[0].vorName + " " + m2.personen[1].nachName);
+
+		boolean sucheP2 = m2.suchePerson(person2);
+		boolean sucheP3 = m2.suchePerson(person3);
+		System.out.println("m2: sucheP2 = false ? " + sucheP2);
+		System.out.println("m2: sucheP3 = true ? " + sucheP3);
+
+		// Menge m12s = new Menge(maxPers);
+		// Menge m12v = new Menge(maxPers);
+		// Menge m12d = new Menge(maxPers);
+		Menge m12s = m1.schnittMenge(m2);
+		// m12s.schnittMenge(m1, m2);
+		Menge m12v = m1.vereinigeMengen(m2);
+		Menge m12d = m1.diffMenge(m2);
+		System.out.println(m12s.getAnzahlPersonen());
+		System.out.println(m12v.getAnzahlPersonen());
+		System.out.println(m12d.getAnzahlPersonen());
+	}
+
+}

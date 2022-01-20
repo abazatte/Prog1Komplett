@@ -1,0 +1,13 @@
+
+public class Frage {
+
+	public String frage;
+
+	public String getFrage() {
+		return frage;
+	}
+
+	public String setFrage(String frage) {
+		return this.frage = frage;
+	}
+}

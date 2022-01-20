@@ -1,0 +1,13 @@
+
+public class Menge {
+public String menge;
+
+public String getMenge() {
+	return menge;
+}
+
+public void setMenge(String menge) {
+	this.menge = menge;
+}
+
+}

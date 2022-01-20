@@ -1,0 +1,27 @@
+
+public class Person {
+	private String vorname;
+	private String nachname;
+
+	Person(String nachname, String vorname) {
+		this.nachname = this.setNachname(nachname);
+		this.vorname = this.setVorname(vorname);
+	}
+
+	public String getVorname() {
+		return this.vorname;
+	}
+
+	public String setVorname(String vorname) {
+		return this.vorname = vorname;
+	}
+
+	public String getNachname() {
+		return this.nachname;
+	}
+
+	public String setNachname(String nachname) {
+		return this.nachname = nachname;
+	}
+
+}

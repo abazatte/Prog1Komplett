@@ -1,0 +1,60 @@
+public class schiffeVersenken {
+	public static void main(String[] args) {
+		System.out.println("Bitte die Seitenlaenge des Feldes eingeben: ");
+		int seitenlaenge = 8;// IO.readInt();
+		int maxSchiffe = (seitenlaenge * seitenlaenge) / 8;
+		String[][] spielfeldSpielerEins = initFeldEins(seitenlaenge, maxSchiffe);
+		String[][] spielfeldSpielerZwei = initFeldZwei(seitenlaenge, maxSchiffe);
+		// System.out.println("Bis wieviel wollen sie spielen ? :");
+		ausgabe(spielfeldSpielerZwei);
+	}
+
+	static String[][] initFeldEins(int seitenlaenge, int schiffe) {
+		return new String[seitenlaenge][seitenlaenge];
+	}
+
+	static String[][] initFeldZwei(int seitenlaenge, int maxSchiffe) {
+		int schiffZaehler = 0;
+		String[][] feldZwei = new String[seitenlaenge][seitenlaenge];
+		for (int a = 0; a < feldZwei.length; a++) {
+			for (int b = 0; b < feldZwei[a].length; b++) {
+				feldZwei[a][b] = "";
+			}
+		}
+		while (schiffZaehler < maxSchiffe) {
+			for (int a = 0; a < feldZwei.length; a++) {
+				for (int b = 0; b < feldZwei[a].length; b++) {
+					if (schiffZaehler < maxSchiffe && !feldZwei[a][b].equals("1") && getZufallsZahl() == 1) {
+						feldZwei[a][b] = "1";
+						schiffZaehler++;
+					} else {
+						feldZwei[a][b] = "0";
+					}
+				}
+			}
+		}
+		System.out.println(schiffZaehler);
+		return feldZwei;
+	}
+
+	static boolean treffer(String feld[][], int x, int y) {
+		return feld[x][y].equals("1");
+	}
+
+	static int getZufallsZahl() {
+		if ((int) (Math.random() * 10) >= 9) {
+			return 1;
+		} else {
+			return 0;
+		}
+	}
+
+	static void ausgabe(String feld[][]) {
+		for (int a = 0; a < feld.length; a++) {
+			for (int b = 0; b < feld[a].length; b++) {
+				System.out.print(feld[a][b] + "\t");
+			}
+			System.out.println();
+		}
+	}
+}
